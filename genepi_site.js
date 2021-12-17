@@ -18,7 +18,7 @@ function styleREG_ARA(feature) {
         opacity: 1,
         color: 'white',
         dashArray: '3',
-        fillOpacity: 0.5
+        fillOpacity: 0.1
     }
 };
 
