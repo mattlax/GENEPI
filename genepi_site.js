@@ -64,7 +64,7 @@ var icontornade = L.icon({
 
 var tornades_ARA = L.geoJSON(tornades, {
     ointToLayer: function (feature, latlng) {
-        return L.marker(latlng, { icon: icon }).bindTooltip(tornades.feature.properties._date);
+        return L.marker(latlng, { icon: icon });
     },
 }) .addTo(map);
 
