@@ -50,28 +50,7 @@ var depARA = L.geoJSON(dep_ARA, {
     style: styleDEP_ARA
 }).addTo(map);
 
-/////////////////////////////////////////////////////
-//////////////// Couche GASPAR ////////////////
-/////////////////////////////////////////////////////
-/*
-function styleCOMGASP_ARA(feature) {
-    return {
-        fillColor: 'yellow',
-        weight: 1,
-        opacity: 1,
-        color: 'black',
-        dashArray: '3',
-        fillOpacity: 0.2
-    }
-};
 
-var gaspARA = L.geoJSON(commune_ARA, {
-    pointToLayer: function (feature, latlng) {
-        return L.polygon(latlng, { icon: icon });
-    },
-    style: styleCOMGASP_ARA
-}).addTo(map);
-*/
 ///////////////////////////////////////////////////////////
 //////////////// ajout de la couche tornade ////////////////
 //////////////////////////////////////////////////////////
@@ -85,29 +64,11 @@ var icontornade = L.icon({
 
 var tornades_ARA = L.geoJSON(tornades, {
     ointToLayer: function (feature, latlng) {
-        return L.marker(latlng, { icon: icontornade }).bindTooltip(tornades.feature.properties._date);
+        return L.marker(latlng, { icon: icon }).bindTooltip(tornades.feature.properties._date);
     },
 }) .addTo(map);
 
-/////////////////////////////////////////////////////
-//////////////// Test WFS////////////////////////////
-/////////////////////////////////////////////////////
-/*
-var boundaries = new L.WFS({
-    url: 'http://demo.opengeo.org/geoserver/ows',
-    typeNS: 'topp',
-    typeName: 'tasmania_state_boundaries',
-    crs: L.CRS.EPSG4326,
-    style: {
-        color: 'blue',
-        weight: 2
-    }
-}).addTo(map)
-  .on('load', function () {
-      map.fitBounds(boundaries);
-  })
 
-*/
 
 /////////////////////////////////////////////////////
 //////////////// panneau de contrôle ////////////////
@@ -117,7 +78,6 @@ var mixed = {
     "région": regionARA, // BaseMaps
     "departement": depARA, 		// BaseMaps
     "Tornades" : tornades_ARA       // layers
-    //"gaspar" : gaspARA // layers
 };
 
 L.control.layers(null, mixed).addTo(map);
