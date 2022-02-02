@@ -4,22 +4,27 @@
         <meta charset="utf-8"/>
         <title> map </title>
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.12.0/moment.min.js"></script>
         <link rel="stylesheet" href="genepi_site.css" />
         <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" ></script>
-        <script src= "region_ARA.js" ></script>
-        <script src = "dep_ARA.js" ></script>
-        <script src = "tornades.js" ></script>
+        <script src= "/donnees/region_ARA.js" ></script>
+        <script src = "/donnees/dep_ARA.js" ></script>
+        <script src = "src/leaflet.timeline.js" ></script>
+        <script src ="/donnees/poly.jsonp" ></script>
+        <script src ="/donnees/densi_gasp.js" ></script>
+        <script src = "donnees/mvt_terrain.js" ></script>
     </head>
 
-    <header>
+   <header>
         <h1> GENEPI </h1>
+        <h2> Un outil de géovisualisation des aléas naturels en Auvergne-Rhône-Alpes.</h2>
     </header>
 
     <Body>
         
         <div id="map"></div>
         <div id="info"></div>
-        
+    
     </Body>
 
     <footer>
@@ -30,7 +35,7 @@
 
     </footer>
 
- <script type="text/javascript" src="genepi_site.js"></script>
+<script type="text/javascript" src="genepi_site.js"></script>
 
 </html>
 
